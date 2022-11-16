@@ -1,250 +1,194 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
-    <!-- SEO Taggar -->
-    <meta property="og:title" content="Jonas Nilsson Front End Developer">
-    <meta property="og:description" content="Här ser ni mina projekt och ni hittar även mina kontaktuppgifter">
-    <meta property="og:image" content="img/meta-og-picture-250w.webp">
-    <meta name="description" content="Jonas Nilssons CV/Portfolio sida. Här finns mina projekt jag har jobbat med och även mina kontakt uppgifter om ni skulle vilja komma i kontakt med mig!">
-    <meta name="keywords" content="html, css, javascript, front end, front end developer, websida, portfolio, cv, hemsida">
-    <meta name="author" content="Jonas Nilsson" >
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Jonas Nilsson | Front End Developer</title>
-    <!-- Style Taggar -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img//favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">    
-    
-    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/css/main.min.css" />
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"">
   </head>
   <body>
-    <!-- Sidoinformationen med profilbilden -->
-    <div class="main-wrap" id="home">
-      <aside class="left-side-menu info">
-        <div class="pic-bg">
-          <img src="img/profile-pic-200w.webp" class="profile-pic" alt="Profile Picture" srcset="/img/profile-pic-200w.webp 200w, img/profile-pic-500w.webp 500w" sizes="(max-width: 800px) 200px, 500px">
-        </div>
-        <h1 class="name">Jonas Nilsson</h1>
-        <h2 class="title">Front End Developer</h2>
-        <ul class="info-list">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/jonas-nilsson-4b8886226/" target="_blank">
-              <i class="bi bi-linkedin"></i>Jonas Nilsson</a>
-          </li>
-          <li>
-            <a href="https://github.com/nilssoncjonas" target="_blank">
-              <i class="bi bi-github"></i>nilssoncjonas</a>
-          </li>
-          <li>
-            <a href="https://www.google.se/maps/place/Kristianstad/@56.0257281,14.1106199,13z/data=!3m1!4b1!4m5!3m4!1s0x4654034d24249807:0x4019078290e7ae0!8m2!3d56.0293936!4d14.1566779?hl=sv"
-              target="_blank"><i class="bi bi-geo-alt"></i>Kristianstad</a
-            >
-          </li>
-          <li>
-            <a href="#"><i class="bi bi-envelope"></i>nilssoncjonas@gmail.com</a>
-          </li>
-          <li>
-            <a href="/files/jonas-nilsson-cv-front-end-developer.pdf" download class="download"><i class="bi bi-download"></i>Download CV</a>
-          </li>
+    <!-- <header>
+      <nav class="nav">
+        <h1>Jonas Nilsson</h1>
+        <ul class="menu">
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
         </ul>
-      </aside>
+      </nav>
+    </header> -->
 
-      <main>
-        <!-- Navbar börjar här -->
-        <div class="nav-sticky">
-          <nav>
-            <ul class="nav-list">
-              <li class="mobile-only">
-                <button class="left-side-menu-toggle mobile-only">
-                  <span><i class="bi bi-info-square"></i></span>
-                </button>
-              </li>
-              <li class="desktop-only"><a href="#home">Hem</a></li>
-              <li class="desktop-only"><a href="#about">Om Mig</a></li>
-              <li class="desktop-only"><a href="#project">Projekt</a></li>
-              <li class="desktop-only"><a href="#contact">Kontakt</a></li>
-              <li class="mobile-only">
-                <button onclick="myFunction()" class="right-side-menu-toggle mobile-only">
-                <span><i class="bi bi-list"></i></span>
-              </button>
-            </li>
-          </ul>
-          <!-- Nedan är för navbaren till mobilvy -->
-            <div class="mobile-nav" id="mobile-nav">
-              <ul class="mobile-nav-list">
-                <li>
-                  <button onclick="myFunction()" class="right-side-menu-toggle mobile-only">
-                    <span><i class="bi bi-x-lg"></i></span>
-                  </button>
-                </li>
-                <li><a href="#home">Hem</a></li>
-                <li><a href="#about">Om Mig</a></li>
-                <li><a href="#project">Projekt</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-              </ul>
-            </div>
-          </nav>
+    <main class="container">
+      <div class="section s1">
+        <picture>
+          <source srcset="/dist/img/mountain.jpg" media="(min-width:800px)" />
+          <img src="/dist/img/mountain.jpg" alt="-" />
+        </picture>
+        <div class="s1-div">
+          <h1>Jonas Nilsson</h1>
+          <h2>Front End Developer <span>student</span></h2>
         </div>
-        <!-- Nedan börjar huvudinnehållet -->
-        <section class="about">
-          <div class="about-div">
-            <h3 class="about-h" id="about">Om Mig</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo mollitia perferendis odio distinctio? Modi earum fuga eaque? Perferendis voluptate, dolore laboriosam ut libero commodi, fuga sit, cupiditate facilis nisi neque.
+      </div>
+      <div class="section s2">
+        <div>
+          <p>
+            Utbildar mig till front end developer för att jag vill vara med att
+            utveckla för framtiden. Jag kom till en punkt i livet där jag kände
+            att det är dags att byta karriär och jag har alltid haft ett enormt
+            intresse för teknik och programmering och bestämde mig för att detta
+            ska bli min nya väg att gå. Jag har ett väldigt driv när det kommer
+            till att lära mig nya saker och i samband med min höga arbetsmoral
+            gör att jag utvecklas snabbt! Min bakgrund som kock gör att jag har
+            lätt för att strukturera upp och överblicka mitt arbete och fokusera
+            på vad som behövs.
+          </p>
+        </div>
+        <h3 id="about">OM MIG</h3>
+      </div>
+
+      <div class="section s3">
+        <!-- Info om Utbildningen -->
+        <h3 class="fedu-heading" id="education">
+          Front End Developer Utbildningen
+        </h3>
+        <div class="fedu-wrap">
+          <div>
+            <h4 class="fedu-info">
+              <i class="bi bi-filetype-html"></i> HTML & CSS
+            </h4>
+            <p>
+              Kursens syfte är att behandla grundläggande tekniker inom
+              webbutveckling för att kunna ta fram fungerande webbplatser, samt
+              att behandla tillgänglighetsanpassning av webben.
+            </p>
+            <p>
+              Målet med kursen är att den studerande ska få en helhetsförståelse
+              för hur man bygger korrekta webbplatser. Förmåga i yrkesrollen som
+              Front end developer återskapa webbplatser utifrån en given design.
+              Grundläggande kunna använda versionshanteringsverktyg
             </p>
           </div>
-          <!-- Info om Utbildningen -->
-          <h3 class="fedu-heading" id="education">
-            Front End Developer Utbildningen
-          </h3>
-          <div class="about-edu">
-            <div>
-              <h4 class="fedu-info">
-                <i class="bi bi-filetype-html"></i> HTML & CSS
-              </h4>
-              <p>
-                Kursens syfte är att behandla grundläggande tekniker inom
-                webbutveckling för att kunna ta fram fungerande webbplatser,
-                samt att behandla tillgänglighetsanpassning av webben.
-              </p>
-              <p>
-                Målet med kursen är att den studerande ska få en
-                helhetsförståelse för hur man bygger korrekta webbplatser.
-                Förmåga i yrkesrollen som Front end developer återskapa
-                webbplatser utifrån en given design. Grundläggande kunna använda
-                versionshanteringsverktyg
-              </p>
-            </div>
-            <div>
-              <h4><i class="bi bi-filetype-js"></i> JavaScript</h4>
-              <p>
-                Kursens syfte är att ge den studerande kunskaper i programmering
-                generellt och färdigheter i Javascript/EcmaScript samt
-                relaterade områden för att kunna skapa interaktiva,
-                användarcentrerade webbplatser själv och i tillsammans med
-                andra.
-              </p>
-              <p>
-                Målet med kursen är att den studerande ska kunna generella
-                begrepp inom programmering och ha en god grundläggande kunskap i
-                Javascript, DOM-trädsmanipulation och eventdriven programmering.
-                Detta för att skapa en helhetsförståelse för de olika delarna en
-                webbplats byggs upp av, vad programmering innebär samt förmåga
-                att i yrkesrollen som Front end developer ta fram fungerande,
-                interaktiva webbapplikationer i JavaScript
-              </p>
-            </div>
-            <div>
-              <h4>
-                <i class="bi bi-building"></i> Kompetensportfölj &
-                Entreprenörskap
-              </h4>
-              <p>
-                Kursens syfte är att behandla verktyg för självledarskap,
-                lärande och professionell utveckling.
-              </p>
-              <p>
-                Målet med kursen är att den studerande ska utveckla kunskaper om
-                de generella kompetenskraven på yrkesrollen samt förmåga att ta
-                ansvar för sin egen kompetensutveckling.
-              </p>
-            </div>
-            <div>
-              <h4><i class="bi bi-terminal"></i> API Utveckling</h4>
-              <p>
-                Kursens syfte är att behandla grundläggande tekniker inom
-                webbutveckling för att skapa webbplatser där information kan
-                lagras, hanteras, analyseras och presenteras.
-              </p>
-              <p>
-                Målet med kursen är att den studerande ska få en
-                helhetsförståelse för användarflöden i webbapplikationer, kunna
-                hantera och lagra information om användare samt förmåga att i
-                yrkesrollen som Front end developer ta fram fungerande,
-                databasdrivna webbapplikationer. Efter kursen ska den studerande
-                kunna genomföra back end utveckling.
-              </p>
-            </div>
-            <div>
-              <h4><i class="bi bi-people"></i> LIA - Lärande I Arbete</h4>
-              <p>
-                Kursens syfte är att förbereda för ett självständigt utövande i
-                yrkesrollen som Front End Developer.
-              </p>
-              <p>
-                Målet med kursen är att den studerande ska utveckla
-                specialiserad yrkespraktisk kompetens inom yrkesrollen Front End
-                Developer.
-              </p>
-            </div>
+          <div>
+            <h4><i class="bi bi-filetype-js"></i> JavaScript</h4>
+            <p>
+              Kursens syfte är att ge den studerande kunskaper i programmering
+              generellt och färdigheter i Javascript/EcmaScript samt relaterade
+              områden för att kunna skapa interaktiva, användarcentrerade
+              webbplatser själv och i tillsammans med andra.
+            </p>
+            <p>
+              Målet med kursen är att den studerande ska kunna generella begrepp
+              inom programmering och ha en god grundläggande kunskap i
+              Javascript, DOM-trädsmanipulation och eventdriven programmering.
+              Detta för att skapa en helhetsförståelse för de olika delarna en
+              webbplats byggs upp av, vad programmering innebär samt förmåga att
+              i yrkesrollen som Front end developer ta fram fungerande,
+              interaktiva webbapplikationer i JavaScript
+            </p>
           </div>
-        </section>
-        <!-- Projektdelen börjar här -->
-        <section class="project">
-          <h3 id="project" class="project-heading">Mina Projekt</h3>
-          <div class="project-wrap">
-            <div>
-              <a href="https://nilssoncjonas.github.io/mi-Barbershop/" target="_blank"><img src="/img/barbershop-assignment-600w.webp" alt="Barbershop, Första inlämningsuppgiften på HTML & CSS kursen." 
-                srcset="img/barbershop-assignment-200w.webp 200w, img/barbershop-assignment-600w.webp 600w" sizes="(max-width: 1024px) 200px, 600px"></a>
-                <p>
-                  HTML & CSS Kursens första inlämningsuppgift.
-                </p>
-            </div>
-            <div>
-              <a href="https://nilssoncjonas.github.io/Frontend-Mentor_Product-preview-card/" target="_blank"><img src="/img/desktop-product-card-600w.webp" alt="Skrivbordsvy av Produkt Kort från Front End Mentor.." 
-                srcset="img/desktop-product-card-200w.webp 200w, img/desktop-product-card-600w.webp 600w" sizes="(max-width: 1024px) 200px, 600px"></a>
-                <p>
-                  Projekt från Front End Mentor.
-                </p>
-            </div>
-            <div>
-              <img src="/img/jn-cv-portfolio-600w.webp" alt="Denna CV/Portfolio sida." 
-              srcset="img/jn-cv-portfolio-200w.webp 200w, img/jn-cv-portfolio-600w.webp 600w" sizes="(max-width: 1024px) 200px, 600px">
-                <p>
-                  Denna CV/Portfolio-sida.
-                </p>
-            </div>            
+          <div>
+            <h4>
+              <i class="bi bi-building"></i> Kompetensportfölj & Entreprenörskap
+            </h4>
+            <p>
+              Kursens syfte är att behandla verktyg för självledarskap, lärande
+              och professionell utveckling.
+            </p>
+            <p>
+              Målet med kursen är att den studerande ska utveckla kunskaper om
+              de generella kompetenskraven på yrkesrollen samt förmåga att ta
+              ansvar för sin egen kompetensutveckling.
+            </p>
           </div>
-        </section>
-          <!-- Kontaktdelen börjar här -->
-        <section class="contact">
-          <h3 id="contact" class="contact-heading">Kontakta Mig</h3>
-          <div class="contact-wrap">           
-            <form name="Kontakt" method="POST" actino="#">
-              <span class="input-wrap"><label for="name"></label><input type="text" id="name" name="name" autocomplete="off" placeholder="Namn:"></span>
-              <span class="input-wrap"><label for="tel"></label><input type="tel" name="tel" id="tel" autocomplete="off" placeholder="Telefon:"></span>
-              <span class="input-wrap"><label for="mail"></label><input type="email" name="mail" id="mail" autocomplete="off" placeholder="E-Post:"></span>
-              <span class="input-wrap"><label for="text"></label><textarea name="text" id="text" cols="30" rows="10" placeholder="Meddelande:"></textarea></span>
-              <button type="submit" class="send-button">Skicka</button>
-            </form>
+          <div>
+            <h4><i class="bi bi-terminal"></i> API Utveckling</h4>
+            <p>
+              Kursens syfte är att behandla grundläggande tekniker inom
+              webbutveckling för att skapa webbplatser där information kan
+              lagras, hanteras, analyseras och presenteras.
+            </p>
+            <p>
+              Målet med kursen är att den studerande ska få en helhetsförståelse
+              för användarflöden i webbapplikationer, kunna hantera och lagra
+              information om användare samt förmåga att i yrkesrollen som Front
+              end developer ta fram fungerande, databasdrivna webbapplikationer.
+              Efter kursen ska den studerande kunna genomföra back end
+              utveckling.
+            </p>
           </div>
-        </section>
-      </main>
-    </div>
-    <!-- Footerdelen börjar här -->
-    <footer>
-      <ul class="footer-list">
-        <li>|</li>
-        <li><a href="#home">Hem</a></li>
-        <li>|</li>
-        <li><a href="#about">Om Mig</a></li>
-        <li>|</li>
-        <li><a href="#education">Utbildning</a></li>
-        <li>|</li>
-        <li><a href="#project">Projekt</a></li>
-        <li>|</li>
-        <li><a href="#contact">Kontakt</a></li>
-        <li>|</li>
-      </ul>
-      <div class="footer-info">
-        2022 &copy; Jonas Nilsson
+          <div>
+            <h4><i class="bi bi-people"></i> LIA - Lärande I Arbete</h4>
+            <p>
+              Kursens syfte är att förbereda för ett självständigt utövande i
+              yrkesrollen som Front End Developer.
+            </p>
+            <p>
+              Målet med kursen är att den studerande ska utveckla specialiserad
+              yrkespraktisk kompetens inom yrkesrollen Front End Developer.
+            </p>
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facere
+          voluptate doloremque doloribus sit iure voluptatum reiciendis
+          laudantium distinctio ipsum!
+        </p>
       </div>
-    </footer>
-
-    <script src="/dist/js/script.js"></script>
+      <div class="section s4">
+        <div class="project-wrap">
+          <div>
+            <a
+              href="https://nilssoncjonas.github.io/mi-Barbershop/"
+              target="_blank"
+              ><img
+                src="/img/barbershop-assignment-600w.webp"
+                alt="Barbershop, Första inlämningsuppgiften på HTML & CSS kursen."
+                srcset="
+                  img/barbershop-assignment-200w.webp 200w,
+                  img/barbershop-assignment-600w.webp 600w
+                "
+                sizes="(max-width: 1024px) 200px, 600px"
+            /></a>
+            <p>HTML & CSS Kursens första inlämningsuppgift.</p>
+          </div>
+          <div>
+            <a
+              href="https://nilssoncjonas.github.io/Frontend-Mentor_Product-preview-card/"
+              target="_blank"
+              ><img
+                src="/img/desktop-product-card-600w.webp"
+                alt="Skrivbordsvy av Produkt Kort från Front End Mentor.."
+                srcset="
+                  img/desktop-product-card-200w.webp 200w,
+                  img/desktop-product-card-600w.webp 600w
+                "
+                sizes="(max-width: 1024px) 200px, 600px"
+            /></a>
+            <p>Projekt från Front End Mentor.</p>
+          </div>
+          <div>
+            <img
+              src="/img/jn-cv-portfolio-600w.webp"
+              alt="Denna CV/Portfolio sida."
+              srcset="
+                img/jn-cv-portfolio-200w.webp 200w,
+                img/jn-cv-portfolio-600w.webp 600w
+              "
+              sizes="(max-width: 1024px) 200px, 600px"
+            />
+            <p>Denna CV/Portfolio-sida.</p>
+          </div>
+        </div>
+      </div>
+      <div class="section">fifth</div>
+    </main>
   </body>
 </html>
