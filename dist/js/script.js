@@ -1,23 +1,27 @@
-window.onscroll = function() {scrollFunction()};
+// const appear = document.querySelector('.appear'); 
+// const cb = function(entries){
+//   entries.forEach(entry => {
+//     if(entry.isIntersecting){
+//       entry.target.classList.add('inview');
+//       entry.unobserve(entry.target)
+//     }
+//   });
+// }
+// const io = new IntersectionObserver(cb);
+// io.observe(appear);
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-} 
+const items = document.querySelectorAll('.appear');
 
-function myFunction(x) {
-  x.classList.toggle("change");
-} 
-
-/* Open */
-function openNav() {
-  document.getElementById("myNav").style.height = "100%";
+const active = function(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+        entry.target.classList.add('inview'); 
+        }else{
+            entry.target.classList.remove('inview'); 
+        }
+    });
 }
-
-/* Close */
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-} 
+const io2 = new IntersectionObserver(active);
+ for(let i=0; i < items.length; i++){
+    io2.observe(items[i]);
+ }

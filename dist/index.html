@@ -10,46 +10,37 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"">
   </head>
   <body>
-        <div class="navbar" id="navbar">
-          <!-- burger icon -->
-          <div class="container" onclick="myFunction(this), openNav()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div> 
-        </div>
-    
- <!-- The overlay -->
- <div id="myNav" class="overlay">
-
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
-
-</div>
-
-<!-- Use any element to open/show the overlay navigation menu -->
-
+   
 
     <main class="wrapper">
-      <div class="section s1">
+      <div class="section s1 appear" id="home">
         <picture>
           <source srcset="/dist/img/mountain.jpg" media="(min-width:800px)" />
           <img src="/dist/img/mountain.jpg" alt="-" />
         </picture>
         <div>
-          <h2>Jonas Nilsson</h2>
+          <div class="waviy">
+            <span style="--i:1">></span>
+            <span style="--i:2">_</span>
+            <span style="--i:3">J</span>
+            <span style="--i:4">o</span>
+            <span style="--i:5">n</span>
+            <span style="--i:6">a</span>
+            <span style="--i:7">s</span>
+            <span style="--i:8">_</span>
+            <span style="--i:9">N</span>
+            <span style="--i:10">i</span>
+            <span style="--i:11">l</span>
+            <span style="--i:12">s</span>
+            <span style="--i:13">s</span>
+            <span style="--i:14">o</span>
+            <span style="--i:15">n</span>
+            <span style="--i:16">_</span>
+           </div>
           <h3>  Front End Developer <span>student</span></h3>
         </div>
       </div>
-      <div class="section s2">
+      <div class="section s2 appear" id="about">
         <div>
           <p>
             Utbildar mig till front end developer för att jag vill vara med att
@@ -66,7 +57,7 @@
         <h3 id="about">OM MIG</h3>
       </div>
 
-      <div class="section s3">
+      <div class="section s3 appear" id="education">
         <!-- Info om Utbildningen -->
         <h3>
           Front End Developer Utbildningen
@@ -153,9 +144,10 @@
             </p>
           </div>
         </div>
+        <i class="bi bi-arrow-left-right"></i>
 
       </div>
-      <div class="section s4">
+      <div class="section s4 appear" id="project">
         <h3 id="project">Mina Projekt</h3>
         <div>
           <div>
@@ -206,39 +198,39 @@
 
 
 
-       <div class="section s5">
+       <div class="section s5 appear" id="contact">
         <h3 id="contact" class="contact-heading">Kontakta Mig</h3>
         <div>
           <form name="Kontakt" method="POST" actino="#" id="form">
 
             <span>
-              <label for="name" class="form__label"></label>
+              <label for="name"></label>
               <input type="text" id="name" name="name" autocomplete="off" placeholder="Namn"/>
             </span> 
             <span>
-              <label for="tel" class="form__label"></label>
+              <label for="tel"></label>
               <input type="tel" name="tel" id="tel" autocomplete="off" placeholder="Telefon"/>
             </span>
 
 
             <span>
-              <label for="mail" class="form__label"></label>
+              <label for="mail"></label>
               <input type="email" name="mail" id="mail" autocomplete="off" placeholder="E-Post"/>
             </span>
             
 
             <span>
-              <label for="text" class="form__label"></label>
-              <textarea name="text" id="text" cols="30" rows="10" placeholder="Meddelande" resize="none"></textarea>
+              <label for="text"></label>
+              <textarea name="text" id="text" cols="15" rows="10" placeholder="Meddelande"></textarea>
             </span>
             <button type="submit" class="send-button">Skicka</button>
           </form>
         </div>
       </div>
-      <div class="section s6">
+      <div class="section s6 appear">
         <footer>
           <ul>
-            <li>|</li>
+            <!-- <li>|</li> -->
             <li><a href="#home">Hem</a></li>
             <li>|</li>
             <li><a href="#about">Om Mig</a></li>
@@ -251,7 +243,8 @@
             <li>|</li>
           </ul>
           <span>
-            2022 &copy; Jonas Nilsson
+            
+            &copy; 2022 | Jonas Nilsson
         </span>
         </footer>
       </div>

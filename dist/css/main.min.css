@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Linux;
+  src: url("/dist/font/linux-biolinum.regular.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,125 +9,56 @@
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
+  font-family: Linux;
 }
-
-.container {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
-  border-radius: 100px;
-}
-
-/* Rotate first bar */
-.change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
-}
-
-/* Fade out the second bar */
-.change .bar2 {
-  opacity: 0;
-}
-
-/* Rotate last bar */
-.change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
-}
-
-#navbar {
-  position: fixed; /* Make it stick/fixed */
-  top: -50px; /* Hide the navbar 50 px outside of the top view */
-  width: 100%; /* Full width */
-  transition: top 0.3s; /* Transition effect when sliding down (and up) */
-  text-align: right;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-}
-
-/* Style the navbar links */
-#navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 15px;
+* a {
   text-decoration: none;
-}
-#navbar a :hover {
-  background-color: #ddd;
   color: black;
 }
 
-/* The Overlay (background) */
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */
-  height: 0%;
-  width: 100%;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0, 0, 0); /* Black fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
-
-/* Position the content inside the overlay */
-.overlay-content {
+.waviy {
   position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: #000;
+  -webkit-animation: flip 3s infinite;
+          animation: flip 3s infinite;
+  -webkit-animation-delay: calc(0.2s * var(--i));
+          animation-delay: calc(0.2s * var(--i));
 }
 
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
-
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+@-webkit-keyframes flip {
+  0%, 80% {
+    transform: rotateY(360deg);
   }
 }
+
+@keyframes flip {
+  0%, 80% {
+    transform: rotateY(360deg);
+  }
+}
+.appear {
+  transition: all 0.8s;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.appear.inview {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.3s;
+}
+
 .wrapper {
   height: 100vh;
 }
 .wrapper .section {
   scroll-snap-align: center;
-  scroll-snap-stop: always;
   scroll-snap-stop: always;
   height: 100vh;
   text-align: center;
@@ -148,6 +83,7 @@
 .s1 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: white;
 }
 .s1 h3 {
   text-transform: uppercase;
@@ -181,7 +117,7 @@
   padding-top: 1rem;
 }
 .s3 h3 {
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 .fedu-wrap {
@@ -195,13 +131,14 @@
       scroll-snap-type: x mandatory;
   border: 1px solid black;
   border-radius: 2rem;
-  background-color: antiquewhite;
+  background-color: lightgray;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .fedu-wrap div {
   line-height: 1.25;
   margin: 1rem 2rem;
   padding: 0 1rem;
-  height: 60vh;
+  height: 56vh;
   min-width: 90vw;
   scroll-snap-align: center;
   scroll-snap-stop: always;
@@ -227,11 +164,47 @@
   text-align: center;
 }
 .s5 div {
-  padding-top: 6rem;
+  margin-top: 3rem;
+  padding: 2rem 0rem;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .s5 div span {
   display: block;
   margin: 1rem auto;
+  border-bottom: 1px solid black;
+}
+
+input, textarea {
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+input:hover, textarea:hover {
+  background-color: lightgray;
+  transition: all 0.3s ease 0s;
+}
+input:not(:hover), textarea:not(:hover) {
+  transition: all 0.3s ease 0s;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+button:hover {
+  transition: all 0.3s ease 0s;
+  background-color: #fafafa;
+  border: 1px solid black;
+  border-radius: 2rem;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+button:not(:hover) {
+  transition: all 0.3s ease 0s;
 }
 
 .s6 {
@@ -239,8 +212,11 @@
   color: white;
   padding-top: 2rem;
 }
+.s6 a {
+  color: white;
+}
 .s6 ul {
-  margin-top: 2rem;
+  margin: 2rem auto;
   list-style-type: none;
 }
 .s6 ul li {
