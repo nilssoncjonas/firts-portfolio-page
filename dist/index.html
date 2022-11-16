@@ -14,27 +14,27 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"">
   </head>
   <body>
-    <!-- <header>
+    <header>
       <nav class="nav">
         <h1>Jonas Nilsson</h1>
-        <ul class="menu">
+        <ul>
           <li>item</li>
           <li>item</li>
           <li>item</li>
           <li>item</li>
         </ul>
       </nav>
-    </header> -->
+    </header>
 
-    <main class="container">
+    <main class="wrapper">
       <div class="section s1">
         <picture>
           <source srcset="/dist/img/mountain.jpg" media="(min-width:800px)" />
           <img src="/dist/img/mountain.jpg" alt="-" />
         </picture>
-        <div class="s1-div">
-          <h1>Jonas Nilsson</h1>
-          <h2>Front End Developer <span>student</span></h2>
+        <div>
+          <h2>Jonas Nilsson</h2>
+          <h3>  Front End Developer <span>student</span></h3>
         </div>
       </div>
       <div class="section s2">
@@ -56,12 +56,17 @@
 
       <div class="section s3">
         <!-- Info om Utbildningen -->
-        <h3 class="fedu-heading" id="education">
+        <h3>
           Front End Developer Utbildningen
         </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facere
+          voluptate doloremque doloribus sit iure voluptatum reiciendis
+          laudantium distinctio ipsum!
+        </p>
         <div class="fedu-wrap">
           <div>
-            <h4 class="fedu-info">
+            <h4>
               <i class="bi bi-filetype-html"></i> HTML & CSS
             </h4>
             <p>
@@ -136,14 +141,11 @@
             </p>
           </div>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet facere
-          voluptate doloremque doloribus sit iure voluptatum reiciendis
-          laudantium distinctio ipsum!
-        </p>
+
       </div>
       <div class="section s4">
-        <div class="project-wrap">
+        <h3 id="project">Mina Projekt</h3>
+        <div>
           <div>
             <a
               href="https://nilssoncjonas.github.io/mi-Barbershop/"
@@ -194,32 +196,52 @@
 
        <div class="section s5">
         <h3 id="contact" class="contact-heading">Kontakta Mig</h3>
-        <div class="contact-wrap">
+        <div>
           <form name="Kontakt" method="POST" actino="#" id="form">
 
-            <div class="form">
-              <input type="text" id="name" name="name" autocomplete="off" placeholder="" class="form__input"/>
-              <label for="name" class="form__label">Namn</label>
-            </div> 
-            <div class="form">
-              <input type="tel" name="tel" id="tel" autocomplete="off" placeholder="" class="form__input"/>
-              <label for="tel" class="form__label">Telefon</label>
-            </div>
+            <span>
+              <label for="name" class="form__label"></label>
+              <input type="text" id="name" name="name" autocomplete="off" placeholder="Namn"/>
+            </span> 
+            <span>
+              <label for="tel" class="form__label"></label>
+              <input type="tel" name="tel" id="tel" autocomplete="off" placeholder="Telefon"/>
+            </span>
 
 
-            <div class="form">'
-              <input type="email" name="mail" id="mail" autocomplete="off" placeholder="" class="form__input"/>
-              <label for="mail" class="form__label">E-Post</label>
-            </div>
+            <span>
+              <label for="mail" class="form__label"></label>
+              <input type="email" name="mail" id="mail" autocomplete="off" placeholder="E-Post"/>
+            </span>
             
 
-            <div class="form">
-              <textarea name="text" id="text" cols="30" rows="10" placeholder="" class="form__textarea"></textarea>
-              <label for="text" class="form__label">Meddelande</label>
-            </div>
-            <button type="submit" class="send-button">Skicka</button> -->
+            <span>
+              <label for="text" class="form__label"></label>
+              <textarea name="text" id="text" cols="30" rows="10" placeholder="Meddelande" resize="none"></textarea>
+            </span>
+            <button type="submit" class="send-button">Skicka</button>
           </form>
         </div>
+      </div>
+      <div class="section s6">
+        <footer>
+          <ul>
+            <li>|</li>
+            <li><a href="#home">Hem</a></li>
+            <li>|</li>
+            <li><a href="#about">Om Mig</a></li>
+            <li>|</li>
+            <li><a href="#education">Utbildning</a></li>
+            <li>|</li>
+            <li><a href="#project">Projekt</a></li>
+            <li>|</li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li>|</li>
+          </ul>
+          <span>
+            2022 &copy; Jonas Nilsson
+        </span>
+        </footer>
       </div>
     </main>
   </body>
