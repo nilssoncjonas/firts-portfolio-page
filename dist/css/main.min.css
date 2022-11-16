@@ -44,14 +44,15 @@
   justify-content: center;
   align-items: center;
   padding-right: 1rem;
-  height: h3;
-  height-font-size: 2rem;
-  height-writing-mode: vertical-lr;
-  height-text-orientation: mixed;
+}
+.s2 h3 {
+  font-size: 2rem;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  text-orientation: upright;
 }
 .s2 div {
   border-right: 1px solid black;
-  border-radius: 2rem;
   margin: 1rem;
   padding: 1rem;
   text-align: left;
@@ -63,29 +64,121 @@
 }
 .s3 h3 {
   margin-top: 2rem;
-  text-align: center;
 }
 
 .fedu-wrap {
   margin: 2rem auto;
   width: 90vw;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow-y: hidden;
   overflow-x: auto;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   border: 1px solid black;
+  border-radius: 2rem;
   background-color: aliceblue;
 }
 .fedu-wrap div {
-  margin: 1em;
-  padding: 1em;
-  height: 55vh;
+  line-height: 1.25;
+  margin: 1rem 2rem;
+  padding: 0 1rem;
+  height: 60vh;
   min-width: 90vw;
   scroll-snap-align: center;
   scroll-snap-stop: always;
 }
 .fedu-wrap div h4 {
   margin-bottom: 1rem;
+}
+
+.s4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s4 div {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.s4 div p {
+  text-align: center;
+}
+
+.s5 {
+  background-color: antiquewhite;
+}
+
+.form {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+}
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid blue;
+  border-radius: 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+  /* Change border when input focus*/
+}
+.form__input:hover {
+  border-color: #888;
+}
+.form__input:focus {
+  border-color: #888;
+}
+.form__textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  border: 2px solid blue;
+  border-radius: 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  padding: 0 0.5rem;
+  color: white;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.form__input:not(:-moz-placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.form__input:not(:-ms-input-placeholder).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
 }/*# sourceMappingURL=main.min.css.map */
