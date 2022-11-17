@@ -8,11 +8,32 @@
     <link rel="stylesheet" href="/dist/css/main.min.css" />
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"">
+    
   </head>
   <body>
-   
+    
+    <ul class="menu">
+      <li><a class="menuItem" href="#">Home</a></li>
+      <li><a class="menuItem" href="#">Profile</a></li>
+      <li><a class="menuItem" href="#">About</a></li>
+      <li><a class="menuItem" href="#">Contacts</a></li>
+    </ul>
+    <nav></nav>
+      <button class="hamburger">
+        <i class="menuIcon bi bi-list"></i>
+        <i class="closeIcon bi bi-x-lg"></i>
+      </button>
 
-    <main class="wrapper">
+      <button class="infobtn">
+        <i class="menuInfo bi bi-info-square"></i>
+        <i class="closeInfo bi bi-x-lg"></i>
+    </button>
+    <div class="infoPage">  
+      <span class="infoItems">Jonas Nilsson</span>     
+    </div>
+
+
+       <main class="wrapperer">
       <div class="section s1 appear" id="home">
         <picture>
           <source srcset="/dist/img/mountain.jpg" media="(min-width:800px)" />
@@ -223,30 +244,12 @@
               <label for="text"></label>
               <textarea name="text" id="text" cols="15" rows="10" placeholder="Meddelande"></textarea>
             </span>
-            <button type="submit" class="send-button">Skicka</button>
+            <button type="submit" class="btn">Skicka</button>
           </form>
         </div>
-      </div>
-      <div class="section s6 appear">
-        <footer>
-          <ul>
-            <!-- <li>|</li> -->
-            <li><a href="#home">Hem</a></li>
-            <li>|</li>
-            <li><a href="#about">Om Mig</a></li>
-            <li>|</li>
-            <li><a href="#education">Utbildning</a></li>
-            <li>|</li>
-            <li><a href="#project">Projekt</a></li>
-            <li>|</li>
-            <li><a href="#contact">Kontakt</a></li>
-            <li>|</li>
-          </ul>
-          <span>
-            
-            &copy; 2022 | Jonas Nilsson
+        <span>            
+          &copy; 2022 Jonas Nilsson
         </span>
-        </footer>
       </div>
     </main>
     <script src="/dist/js/script.js"></script>
