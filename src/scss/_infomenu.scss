@@ -1,5 +1,6 @@
 @use "./colors" as c;
 @use "./mixins" as *;
+@use "./font";
 
 .infobtn {
     position: fixed;
@@ -19,18 +20,7 @@
     width: 100vw;
     text-align: center;
     z-index: 1;
-    // background: red;
-    // color: white;
-    // padding-top: 4rem;
-    // list-style-type: none;
-    // li {
-    //   margin: 2rem;
-    //   padding: 2rem;
-    // }
-    // a {
-    //   color: black;
-    //   font-size: 1.5rem;
-    // }
+
   }
   .closeInfo {
     display: none;

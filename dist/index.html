@@ -31,7 +31,7 @@
     <div class="infoPage">        
       <aside class="left-side-menu info">
         <div class="pic-bg">
-          <img src="img/profile-pic-200w.webp" class="profile-pic" alt="Profile Picture" srcset="/img/profile-pic-200w.webp 200w, img/profile-pic-500w.webp 500w" sizes="(max-width: 800px) 200px, 500px">
+          <img src="aimg/profile-pic-200w.webp" class="profile-pic" alt="Profile Picture" srcset="/img/profile-pic-200w.webp 200w, img/profile-pic-500w.webp 500w" sizes="(max-width: 800px) 200px, 500px">
         </div>
         <h1 class="name">Jonas Nilsson</h1>
         <h2 class="title">Front End Developer</h2>
@@ -62,14 +62,14 @@
     </div>
 
 
-       <main class="wrapperer">
-      <div class="section s1 appear" id="home">
+       <main>
+      <div class="section s1" id="home">
         <picture>
           <source srcset="img/mountain.jpg" media="(min-width:800px)" />
           <img src="img/mountain.jpg" alt="-" />
         </picture>
-        <div>
-          <div class="waviy">
+        <div class="frontLogoWrap">
+          <div class="textFlip">
             <span style="--i:1">></span>
             <span style="--i:2">_</span>
             <span style="--i:3">J</span>
@@ -85,12 +85,12 @@
             <span style="--i:13">s</span>
             <span style="--i:14">o</span>
             <span style="--i:15">n</span>
-            <span style="--i:16">|</span>
+            <!-- <span style="--i:16">|</span> -->
            </div>
           <h3>  Front End Developer <span>student</span></h3>
         </div>
       </div>
-      <div class="section s2 appear" id="about">
+      <div class="section s2" id="about">
         <div>
           <p>
             Utbildar mig till front end developer för att jag vill vara med att
@@ -107,7 +107,7 @@
         <h3 id="about">OM MIG</h3>
       </div>
 
-      <div class="section s3 appear" id="education">
+      <div class="section s3" id="education">
         <!-- Info om Utbildningen -->
         <h3>
           Front End Developer Utbildningen
@@ -197,8 +197,10 @@
         <i class="bi bi-arrow-left-right"></i>
 
       </div>
-      <div class="section s4 appear" id="project">
+      <div class="section s4" id="project">
         <h3 id="project">Mina Projekt</h3>
+
+        <!-- Göra om till ul/li i mobil view -->
         <div>
           <div>
             <a
@@ -248,7 +250,7 @@
 
 
 
-       <div class="section s5 appear" id="contact">
+       <div class="section s5" id="contact">
         <h3 id="contact" class="contact-heading">Kontakta Mig</h3>
         <div>
           <form name="Kontakt" method="POST" actino="#" id="form">

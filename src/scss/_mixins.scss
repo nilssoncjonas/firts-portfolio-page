@@ -15,17 +15,9 @@
   
 }
 
-@mixin border-color-shadow {
-  border-inline-start: 5px solid;
-  border-inline-end: 5px solid;
-  border-block-start: 5px solid;
-  border-block-end: 5px solid;
-  border-image-source: linear-gradient(180deg, c.$purple , c.$blue, c.$light-blue);
-  border-image-slice: 1;
-  box-shadow: 0px 0px 5px 5px rgba(18, 18, 18, 0.75);
-}
 
 @mixin button {
+  border: 1px solid c.$gold;
   background-image: linear-gradient(135deg, c.$gold-light, c.$gold);
   padding: 10px 20px;
   border-radius: 25px;
