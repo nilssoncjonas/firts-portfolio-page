@@ -1,0 +1,110 @@
+@use "./colors" as c;
+@use "./mixins" as *;
+
+.infobtn {
+    position: fixed;
+    z-index: 2;
+    top: 0.5rem;
+    left: 0.35rem;
+    // padding: 4px;
+    border: 0px;
+    background: none;
+    cursor: pointer;
+  }
+  .infoPage {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    z-index: 1;
+    // background: red;
+    // color: white;
+    // padding-top: 4rem;
+    // list-style-type: none;
+    // li {
+    //   margin: 2rem;
+    //   padding: 2rem;
+    // }
+    // a {
+    //   color: black;
+    //   font-size: 1.5rem;
+    // }
+  }
+  .closeInfo {
+    display: none;
+  }
+  .showInfo {
+    transform: translateY(0);
+  }
+
+.name {
+    margin: 0px;
+    color: c.$gold;
+    font-family: "Comforter Brush", cursive;
+    font-size: 3.5em;
+  }
+  .left-side-menu {
+    @include border-grey-shadow;
+    position: sticky;
+    // left: 2em;
+    // top: 3vw;
+    margin: 3rem 0rem 0rem 2rem;
+    
+    width: 300px;
+    height: 100%;
+    // background-color: c.$black-bg-dark;
+    background-image: linear-gradient(
+      180deg,
+      c.$black-fade-top,
+      c.$black-fade-bottom);
+    text-align: center;
+  }
+  .pic-bg {
+    @include border-gold-shadow;
+    width: auto;
+    height: auto;
+    margin: 10%;
+    background-image: linear-gradient(
+      135deg,
+      c.$black-fade-top,
+      c.$black-fade-bottom
+    );
+  }
+  .profile-pic {
+    border: 1px solid c.$black-fade-top;
+    border-radius: 25px;
+    margin: 15px;
+    width: 80%;
+  }
+  .title {
+    font-size: 1.2em;
+    color: c.$gold;
+    border-top: 1px solid c.$gold;
+    border-bottom: 1px solid c.$gold;
+    padding: 5px 0px;
+    background-image: linear-gradient(
+      135deg,
+      c.$black-fade-top,
+      c.$black-fade-bottom
+    );
+  }
+  a {
+    color: c.$gold;
+    text-decoration: none;
+    letter-spacing: 2px;
+  }
+  .info-list {
+    padding-left: 0px;
+    list-style: none;
+    li {
+      margin: 30px;
+    }
+  }
+  .download {
+    @include button;
+  }
+  .bi-download {
+    padding-right: 15px;
+  }

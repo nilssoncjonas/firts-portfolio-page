@@ -9,10 +9,14 @@ function toggleMenu() {
     menu.classList.remove("showMenu");
     closeIcon.style.display = "none";
     menuIcon.style.display = "block";
+
   } else {
     menu.classList.add("showMenu");
     closeIcon.style.display = "block";
     menuIcon.style.display = "none";
+    infoPage.classList.remove("showInfo");
+    menuInfo.style.display = "block";
+    closeInfo.style.display = "none";
   }
 }
 
@@ -21,8 +25,7 @@ menuItems.forEach(
     function(menuItem) { 
       menuItem.addEventListener("click", toggleMenu);
     }
-  )
-  
+  ) 
 
   // Till info menu
 const infoPage = document.querySelector(".infoPage");
@@ -44,9 +47,9 @@ function toggleMenuInfo() {
 }
 
 infobtn.addEventListener("click", toggleMenuInfo);
-menuInfo.forEach( 
-    function(menuItem) { 
-      menuItem.addEventListener("click", toggleMenuInfo);
-    }
-  )
+menuInfo.forEach(
+  function(menuItem) {
+  menuItem.addEventListener("click", toggleMenuInfo)
+  }
+)
   

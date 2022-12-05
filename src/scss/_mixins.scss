@@ -1,0 +1,49 @@
+@use "colors" as c;
+
+// Denna scss har de färdiga modulerna
+@mixin border-gold-shadow {
+
+  border: 1px solid c.$gold;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px 5px rgba(18, 18, 18, 0.75);
+
+}
+@mixin border-grey-shadow {
+  border: 1px solid c.$black-light;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px 5px rgba(18, 18, 18, 0.75);
+  
+}
+
+@mixin border-color-shadow {
+  border-inline-start: 5px solid;
+  border-inline-end: 5px solid;
+  border-block-start: 5px solid;
+  border-block-end: 5px solid;
+  border-image-source: linear-gradient(180deg, c.$purple , c.$blue, c.$light-blue);
+  border-image-slice: 1;
+  box-shadow: 0px 0px 5px 5px rgba(18, 18, 18, 0.75);
+}
+
+@mixin button {
+  background-image: linear-gradient(135deg, c.$gold-light, c.$gold);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  color: c.$black;
+  text-decoration: none;
+  &:hover {
+    background-image: linear-gradient(
+      135deg,
+      c.$black-fade-top,
+      c.$black-fade-bottom
+      );
+      color: c.$gold;
+      border: 1px solid c.$gold;
+      transition: all 0.3s ease 0s;
+    }
+    &:not(:hover) {
+      transition: all 0.3s ease 0s;
+    }
+   
+  }
