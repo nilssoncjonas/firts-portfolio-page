@@ -2,7 +2,6 @@
 @use "./font";
 @use "./colors" as c;
 @use "./linkmenu";
-@use "./infomenu";
 
 * {
   // border: 1px solid black;
@@ -38,7 +37,7 @@ section {
 
 .pic-bg {
   @include border-gold-shadow;
-  margin: 10% ;
+  margin: 10%;
   background-image: linear-gradient(
     135deg,
     c.$black-fade-top,
@@ -147,14 +146,17 @@ section {
 
   div {
     line-height: 1.2;
-    margin: 1rem 2rem;
+    margin: 1em;
     padding: 0.5em;
     height: auto;
     min-width: 90vw;
+    max-width: 1024px;
     scroll-snap-align: center;
     scroll-snap-stop: always;
+    p {
+      width: 100%;
+    }
     h4 {
-      // color: c.$gold;
       margin-bottom: 0.5em;
       i {
         font-size: 2.5rem;
@@ -166,11 +168,13 @@ section {
 #project {
   flex-wrap: nowrap;
   flex-direction: column;
-  div {
-    margin: 2em auto;
-    div {
+  ul {
+    margin-top: 2em;
+    list-style: none;
+    li {
+      margin-top: 1.5em;
       p {
-        margin-top: 0.5rem;
+        margin-top: 0.5em;
       }
     }
   }
@@ -198,42 +202,59 @@ section {
 
 }
 
+#download {
+  @include button;
+}
+#downloadI {
+  padding-right: 15px;
+  font-size: 1.5rem; 
+}
 
 @media ( min-width: 768px) {
 
-  body  {
-      background-color: red;
+  // body  {
+  //     background-color: red;
+  //   }
+    .menu {
+      height: 450px;
+  
     }
     
-    .s2 {
-      div {
+    #about {
+      .text {
         margin: 0 5em;
+        max-width: 600px;
       }
-      h3 {
+      .vertical {
         margin-right: 3em;
       }    
     }
     
     
-  .s3 {
+  #education {
+    h3 {
+      span {
+        display: inline;
+      }
+    }
     p {
-      width: 50%;
+      // width: 50%;
       margin: 2em;
     }
     .fedu-wrap {
-    width: 85%;
-    height: 50%;
+      max-width: 600px;
+      height: 50%;
     div {
-      width: 80%;
+      min-width: 95%;
       p {
         margin: 0 auto;
-        width: 75%;
+        max-width: 450px;
       }
     }        
   }
 }
 
-  .s5 {
+  #project {
     div {
       width: 66%;
     }
@@ -242,7 +263,15 @@ section {
 }
 
 @media ( min-width: 1024px)  {
-  body  {
-    background-color: cornflowerblue;
+  // body  {
+  //   background-color: cornflowerblue;
+  // }
+
+
+  .fedu-wrap {
+    div {
+      min-width: 90%;
+    }
   }
+
 }

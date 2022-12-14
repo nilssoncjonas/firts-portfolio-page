@@ -13,27 +13,6 @@
   <body>
 
 
-  <ul class="infoList">
-    <li> <a href="https://www.linkedin.com/in/jonas-nilsson-4b8886226/"
-      target="_blank"><i class="bi bi-linkedin"></i><span>Jonas Nilsson</span></a>
-    </li>
-    <li><a href="https://github.com/nilssoncjonas" target="_blank">
-      <i class="bi bi-github"></i><span>nilssoncjonas</span></a>
-    </li>
-    <li><a href="https://www.google.se/maps/place/Kristianstad/@56.0257281,14.1106199,13z/data=!3m1!4b1!4m5!3m4!1s0x4654034d24249807:0x4019078290e7ae0!8m2!3d56.0293936!4d14.1566779?hl=sv"
-      target="_blank"><i class="bi bi-geo-alt"></i><span>Kristianstad</span></a>
-    </li>
-    <li><a href="#"><i class="bi bi-envelope"></i><span>nilssoncjonas@gmail.com</span></a>
-    </li>
-    <li><a href="/files/jonas-nilsson-cv-front-end-developer.pdf"
-      download id="download"><i class="bi bi-download" id="downloadI"></i>Ladda ner CV</a>
-    </li>
-  </ul>
-  
-  <button class="infobtn">
-    <i class="menuInfo bi bi-info-square"></i>
-    <i class="closeInfo bi bi-x-lg"></i>
-  </button>
 
 
 
@@ -56,7 +35,7 @@
         <div class="pic-bg">
           <picture>
             <source media="(max-width: 768px)"  srcset="dist/img/profile-pic-200w.webp">
-            <source media="(max-width: 1024px)" srcset="dist/img/profile-pic-500w.webp">
+            <source media="(min-width: 1024px)" srcset="dist/img/profile-pic-500w.webp">
             <img
             src="dist/img/profile-pic-200w.webp"
             alt="Profile Picture"/>
@@ -184,54 +163,49 @@
       </div>
       <i class="bi bi-arrow-left-right"></i>
     </section>
-    <section id="project">
-      <h3 id="project">Mina Projekt</h3>
 
-      <!-- Göra om till ul/li i mobil view -->
-      <div>
-        <div>
-          <a
-            href="https://nilssoncjonas.github.io/mi-Barbershop/"
-            target="_blank"
-            ><img
-              src="dist/img/barbershop-assignment-600w.webp"
-              alt="Barbershop, Första inlämningsuppgiften på HTML & CSS kursen."
-              srcset="
-                dist/img/barbershop-assignment-200w.webp 200w,
-                dist/img/barbershop-assignment-600w.webp 600w
-              "
-              sizes="(max-width: 1024px) 200px, 600px"
-          /></a>
-          <p>HTML & CSS Kursens första inlämningsuppgift.</p>
-        </div>
-        <div>
-          <a
-            href="https://nilssoncjonas.github.io/Frontend-Mentor_Product-preview-card/"
-            target="_blank"
-            ><img
-              src="dist/img/desktop-product-card-600w.webp"
-              alt="Skrivbordsvy av Produkt Kort från Front End Mentor.."
-              srcset="
-                dist/img/desktop-product-card-200w.webp 200w,
-                dist/img/desktop-product-card-600w.webp 600w
-              "
-              sizes="(max-width: 1024px) 200px, 600px"
-          /></a>
-          <p>Projekt från Front End Mentor.</p>
-        </div>
-        <div>
-          <img
-            src="dist/img/jn-cv-portfolio-600w.webp"
-            alt="Denna CV/Portfolio sida."
+    <section id="project">
+      <h3>Mina Projekt</h3>
+
+      <ul>
+        <li><a
+          href="https://nilssoncjonas.github.io/mi-Barbershop/"
+          target="_blank"
+          ><img
+            src="dist/img/barbershop-assignment-600w.webp"
+            alt="Barbershop, Första inlämningsuppgiften på HTML & CSS kursen."
             srcset="
-              dist/img/jn-cv-portfolio-200w.webp 200w,
-              dist/img/jn-cv-portfolio-600w.webp 600w
+              dist/img/barbershop-assignment-200w.webp 200w,
+              dist/img/barbershop-assignment-600w.webp 600w
             "
-            sizes="(max-width: 1024px) 200px, 600px"
-          />
-          <p>Första CV/Portfolio-sida.</p>
-        </div>
-      </div>
+            sizes="(max-width: 768px) 100px, 250px"
+        /></a>
+        <p>HTML & CSS Kursens första inlämningsuppgift.</p></li>
+        <li><a
+          href="https://nilssoncjonas.github.io/Frontend-Mentor_Product-preview-card/"
+          target="_blank"
+          ><img
+            src="dist/img/desktop-product-card-600w.webp"
+            alt="Skrivbordsvy av Produkt Kort från Front End Mentor.."
+            srcset="
+              dist/img/desktop-product-card-200w.webp 200w,
+              dist/img/desktop-product-card-600w.webp 600w
+            "
+            sizes="(max-width: 768px) 100px, 250px"
+        /></a>
+        <p>Projekt från Front End Mentor.</p></li>
+        <li><img
+          src="dist/img/jn-cv-portfolio-600w.webp"
+          alt="Denna CV/Portfolio sida."
+          srcset="
+            dist/img/jn-cv-portfolio-200w.webp 200w,
+            dist/img/jn-cv-portfolio-600w.webp 600w
+          "
+          sizes="(max-width: 768px) 100px, 250px"
+        />
+        <p>Första CV/Portfolio-sida.</p></li>
+      </ul>
+
     </section>
 
     <section id="contact">
