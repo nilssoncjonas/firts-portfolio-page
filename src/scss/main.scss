@@ -12,47 +12,28 @@
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   font-family: Linux;
-  // background-color: red;
 }
 body {
   background-color: c.$black-bg-body;
 }
 
-
-
 main {
-  height: 98vh;
+  height: 98vh; 
   
-  
-  .section {
+section {
     @include border-gold-shadow;
     background-color: c.$black-bg-dark;
     scroll-snap-align: center;
     scroll-snap-stop: always;
     height: 98vh;
-    // padding: 0.5em;
     margin: 1em 0.5em;
     text-align: center;
     color: c.$gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
-}
-.s1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  // img {
-  //   padding-top: 0rem;
-  //   width: 300px;
-  //   border-radius: 2rem;
-  //   box-shadow: 0px 0px 5px 5px rgba(18, 18, 18, 0.75);
-  // }
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    // color: c.$gold;
-  }
-
 }
 
 .pic-bg {
@@ -72,11 +53,9 @@ main {
   }
 }
 
-
 .frontLogoWrap {
   @include border-gold-shadow;
   margin: 2em auto;
-
   padding: 1em;
   background-color: none;
   background-image: linear-gradient(
@@ -110,22 +89,20 @@ main {
   }
 }
 
-
-
-
-
-.s2 {
+#about {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-right: 1rem;
-  h3 {
+  flex-wrap: nowrap;
+  .vertical {
     font-size: 2rem;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    padding-right: 0.25em;
+    padding-right: 0.5em;
   }
-  div {
+  
+  .text {
     border-right: 1px solid c.$gold;
     color: c.$white;
     margin: 1rem;
@@ -135,8 +112,7 @@ main {
   }
 }
 
-.s3 {
-  
+#education {  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,7 +120,6 @@ main {
 
   h3 {
     margin: 1rem auto;
-    // color: c.$gold;
     span {
       display: block;
     }
@@ -152,6 +127,9 @@ main {
   p {
     margin: 1em 0.5em;
     color: c.$white;
+  }
+  i {
+    font-size: 2rem;
   }
 }
 
@@ -167,7 +145,6 @@ main {
   background-color: c.$black-fade-bottom;
   @include border-grey-shadow;
 
-
   div {
     line-height: 1.2;
     margin: 1rem 2rem;
@@ -179,14 +156,15 @@ main {
     h4 {
       // color: c.$gold;
       margin-bottom: 0.5em;
+      i {
+        font-size: 2.5rem;
+      }
     }
   }
 }
 
-.s4 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#project {
+  flex-wrap: nowrap;
   flex-direction: column;
   div {
     margin: 2em auto;
@@ -198,51 +176,28 @@ main {
   }
 }
 
-.s5 {
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 2rem;
-  margin: 1rem auto;
-  // text-align: center;
-  h3{
-    margin: 1em;
-  }
-
-  div {
-    width: 85%;
-    margin: 2rem;
-    padding: 2rem 0rem;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+.footer {
+  text-align: center;
+  list-style-type: none;
+  margin-bottom: 2rem;;
+  li {
+    margin-top: 2rem;
     span {
       display: block;
-      margin: 1rem auto;
-      border-bottom: 1px solid c.$gold;
+    }
+  a {
+      color: c.$gold;
+      text-decoration: none;
+      letter-spacing: 2px;
+      i {
+        font-size: 2.5rem;
+       }
     }
   }
+
 }
-input,
-textarea {
-  color: c.$gold;
-  background-color: c.$black-bg-dark;
-  border: 0;
-  border-radius: 0.5em 0.5em 0em 0em;
-  padding: 0.75em;
-  &:hover {
-    background-color: c.$black-light;
-    transition: all 0.3s ease 0s;
-  }
-  &:not(:hover) {
-    transition: all 0.3s ease 0s;
-  }
-}
-.btn {
-  @include button;
-}
+
 
 @media ( min-width: 768px) {
 

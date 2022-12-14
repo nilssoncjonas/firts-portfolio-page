@@ -1,3 +1,4 @@
+  // Link menu
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger= document.querySelector(".hamburger");
@@ -27,7 +28,7 @@ menuItems.forEach(
     }
   ) 
 
-  // Till info menu
+  // info menu
 const infoList = document.querySelector(".infoList");
 const infoItems = document.querySelectorAll(".infoItem");
 const infobtn= document.querySelector(".infobtn");
@@ -42,8 +43,7 @@ function toggleMenuInfo() {
   } else {
     infoList.classList.add("showInfo");
     closeInfo.style.display = "block";
-    menuInfo.style.display = "none";
-    
+    menuInfo.style.display = "none";    
   }
 }
 

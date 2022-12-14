@@ -12,17 +12,14 @@
   border: 0px;
   background: none;
   cursor: pointer;
-  color: c.$gold;
-  
+  color: c.$gold;  
 }
 .closeIcon {
   display: none;
 }
 
 .menu {
-  // display: none;
   @include border-gold-shadow;
-  // background-color: c.$black;
   background-image: linear-gradient(
     135deg,
     c.$black-fade-top,

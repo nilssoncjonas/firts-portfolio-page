@@ -51,7 +51,7 @@
   </button>
   
   <main>
-    <div class="section s1" id="home">
+    <section id="home">
       <div>
         <div class="pic-bg">
           <picture>
@@ -85,9 +85,9 @@
           <h3>Front End Developer <span>student</span></h3>
         </div>
       </div>
-    </div>
-    <div class="section s2" id="about">
-      <div>
+    </section>
+    <section id="about">
+      <div class="text">
         <p>
           Utbildar mig till front end developer för att jag vill vara med att
           utveckla för framtiden. Jag kom till en punkt i livet där jag kände
@@ -98,12 +98,12 @@
           gör att jag utvecklas snabbt! Min bakgrund som kock gör att jag har
           lätt för att strukturera upp och överblicka mitt arbete och fokusera
           på vad som behövs.
-        </p>
+        </p>        
       </div>
-      <h3 id="about">OM MIG</h3>
-    </div>
+      <h3 class="vertical" id="about">OM MIG</h3>
+    </section>
 
-    <div class="section s3" id="education">
+    <section id="education">
       <!-- Info om Utbildningen -->
       <h3>Front End Developer <span>Utbildningen</span></h3>
       <p>
@@ -183,8 +183,8 @@
         </div>
       </div>
       <i class="bi bi-arrow-left-right"></i>
-    </div>
-    <div class="section s4" id="project">
+    </section>
+    <section id="project">
       <h3 id="project">Mina Projekt</h3>
 
       <!-- Göra om till ul/li i mobil view -->
@@ -232,11 +232,30 @@
           <p>Första CV/Portfolio-sida.</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section s5" id="contact">
-      <span> &copy; 2022 Jonas Nilsson </span>
-    </div>
+    <section id="contact">
+      <ul class="footer">
+        <li> <a href="https://www.linkedin.com/in/jonas-nilsson-4b8886226/"
+          target="_blank"><i class="bi bi-linkedin"></i><span>Jonas Nilsson</span></a>
+        </li>
+        <li><a href="https://github.com/nilssoncjonas" target="_blank">
+          <i class="bi bi-github"></i><span>nilssoncjonas</span></a>
+        </li>
+        <li><a href="https://www.google.se/maps/place/Kristianstad/@56.0257281,14.1106199,13z/data=!3m1!4b1!4m5!3m4!1s0x4654034d24249807:0x4019078290e7ae0!8m2!3d56.0293936!4d14.1566779?hl=sv"
+          target="_blank"><i class="bi bi-geo-alt"></i><span>Kristianstad</span></a>
+        </li>
+        <li><a href="#"><i class="bi bi-envelope"></i><span>nilssoncjonas@gmail.com</span></a>
+        </li>
+        <li><a href="/files/jonas-nilsson-cv-front-end-developer.pdf"
+          download id="download"><i class="bi bi-download" id="downloadI"></i>Ladda ner CV</a>
+        </li>
+        <li>
+          <span> &copy; 2022 Jonas Nilsson </span>
+
+        </li>
+      </ul>
+    </section>
   </main>
     <script src="dist/js/script.js"></script>
   </body>

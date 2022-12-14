@@ -51,6 +51,9 @@
   }
 
 }
+.showInfo {
+transform: translateY(0);
+}
 
 #download {
   @include button;
@@ -59,11 +62,3 @@
   padding-right: 15px;
   font-size: 1.5rem; 
 }
-
-
-.showInfo {
-  transform: translateY(0);
-}
-
-
-
