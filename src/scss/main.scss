@@ -136,11 +136,12 @@ section {
   ul {
     list-style: none;
     margin-top: 0.5em;
+    width: 33%;
     li {
       margin: 1em 0em;
       border: 1px solid c.$black-bg-dark;
       border-radius: 15px;
-      padding: 0.25em;
+      padding: 0.5em 0.25em;
       &:hover {
         border-radius: 15px;
         border: 1px solid c.$gold;
@@ -296,6 +297,14 @@ section {
 #downloadI {
   padding-right: 15px;
   font-size: 1.5rem; 
+}
+#contact {
+  h3 {
+    @include bg-fade;
+    @include border-gold;
+    padding: 0.5em 0.25em;
+    margin-top: 4em;
+  }
 }
 
 @media ( min-width: 768px) {
