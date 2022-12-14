@@ -14,7 +14,7 @@ function toggleMenu() {
     menu.classList.add("showMenu");
     closeIcon.style.display = "block";
     menuIcon.style.display = "none";
-    infoPage.classList.remove("showInfo");
+    infoList.classList.remove("showInfo");
     menuInfo.style.display = "block";
     closeInfo.style.display = "none";
   }
@@ -28,21 +28,22 @@ menuItems.forEach(
   ) 
 
   // Till info menu
-const infoPage = document.querySelector(".infoPage");
+const infoList = document.querySelector(".infoList");
 const infoItems = document.querySelectorAll(".infoItem");
 const infobtn= document.querySelector(".infobtn");
 const closeInfo= document.querySelector(".closeInfo");
 const menuInfo = document.querySelector(".menuInfo");
 
 function toggleMenuInfo() {
-  if (infoPage.classList.contains("showInfo")) {
-    infoPage.classList.remove("showInfo");
+  if (infoList.classList.contains("showInfo")) {
+    infoList.classList.remove("showInfo");
     closeInfo.style.display = "none";
     menuInfo.style.display = "block";
   } else {
-    infoPage.classList.add("showInfo");
+    infoList.classList.add("showInfo");
     closeInfo.style.display = "block";
     menuInfo.style.display = "none";
+    
   }
 }
 

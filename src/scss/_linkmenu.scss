@@ -2,68 +2,51 @@
 @use "./mixins" as *;
 @use "./font";
 
-
-.infobtn {
+.hamburger {
+  font-size: 2.5rem;
   position: fixed;
-  z-index: 4;
-  top: 1rem;
-  left: 1rem;
+  z-index: 5;
+  top: 0.5rem;
+  right: 0.75rem;
   padding: 4px;
   border: 0px;
   background: none;
   cursor: pointer;
   color: c.$gold;
-  i {
-    font-size: 2rem;
-  }
+  
 }
-.closeInfo {
+.closeIcon {
   display: none;
 }
-.infoList {
+
+.menu {
+  // display: none;
   @include border-gold-shadow;
+  // background-color: c.$black;
   background-image: linear-gradient(
     135deg,
     c.$black-fade-top,
     c.$black-fade-bottom
     );
-    transform: translateY(-100%);
   position: fixed;
+  transform: translateY(-100%);
   transition: transform 0.3s;
   height: 100vh;
   width: 100vw;
   text-align: center;
-  z-index: 1;
+  z-index: 5;
+  padding-top: 2rem;
   list-style-type: none;
   li {
     margin-top: 3rem;
-    span {
-      display: block;
-    }
-  a {
-      color: c.$gold;
-      text-decoration: none;
-      letter-spacing: 2px;
-      i {
-        font-size: 2.5rem;
-       }
-    }
   }
-
+  a {
+    color: c.$gold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 }
-
-#download {
-  @include button;
-}
-#downloadI {
-  padding-right: 15px;
-  font-size: 1.5rem; 
-}
-
-
-.showInfo {
+.showMenu {
   transform: translateY(0);
 }
-
-
-
