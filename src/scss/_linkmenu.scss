@@ -13,7 +13,10 @@
   background: none;
   cursor: pointer;
   color: c.$gold;  
+
 }
+
+
 .closeIcon {
   display: none;
 }
@@ -21,11 +24,7 @@
 .menu {
   margin: -25px auto;
   @include border-gold-shadow;
-  background-image: linear-gradient(
-    135deg,
-    c.$black-fade-top,
-    c.$black-fade-bottom
-    );
+  background-color: rgba(51, 51, 51, 0.85);
   position: fixed;
   transform: translateY(-100%);
   transition: transform 0.3s;
@@ -36,7 +35,19 @@
   padding-top: 2rem;
   list-style-type: none;
   li {
-    margin-top: 3rem;
+    width: auto;
+    margin: 2rem auto;
+    padding: 0.5em 1em;
+    border: 1px solid rgba(51, 51, 51, 0.85);
+    &:hover {
+      @include border-gold;
+      @include bg-fade;
+      transform: scale(1.2);   
+      transition: all 0.3s ease 0s;
+    }
+    &:not(:hover) {
+      transition: all 0.3s ease 0s;
+    } 
   }
   a {
     color: c.$gold;
@@ -45,6 +56,7 @@
     text-transform: uppercase;
   }
 }
+
 .showMenu {
   transform: translateY(25px);
 }
