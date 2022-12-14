@@ -3,11 +3,11 @@
 @use "./font";
 
 .hamburger {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   position: fixed;
   z-index: 5;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 1rem;
+  right: 0.5em;
   padding: 4px;
   border: 0px;
   background: none;

@@ -29,28 +29,28 @@ menuItems.forEach(
   ) 
 
   // info menu
-const infoList = document.querySelector(".infoList");
-const infoItems = document.querySelectorAll(".infoItem");
-const infobtn= document.querySelector(".infobtn");
-const closeInfo= document.querySelector(".closeInfo");
-const menuInfo = document.querySelector(".menuInfo");
+// const infoList = document.querySelector(".infoList");
+// const infoItems = document.querySelectorAll(".infoItem");
+// const infobtn= document.querySelector(".infobtn");
+// const closeInfo= document.querySelector(".closeInfo");
+// const menuInfo = document.querySelector(".menuInfo");
 
-function toggleMenuInfo() {
-  if (infoList.classList.contains("showInfo")) {
-    infoList.classList.remove("showInfo");
-    closeInfo.style.display = "none";
-    menuInfo.style.display = "block";
-  } else {
-    infoList.classList.add("showInfo");
-    closeInfo.style.display = "block";
-    menuInfo.style.display = "none";    
-  }
-}
+// function toggleMenuInfo() {
+//   if (infoList.classList.contains("showInfo")) {
+//     infoList.classList.remove("showInfo");
+//     closeInfo.style.display = "none";
+//     menuInfo.style.display = "block";
+//   } else {
+//     infoList.classList.add("showInfo");
+//     closeInfo.style.display = "block";
+//     menuInfo.style.display = "none";    
+//   }
+// }
 
-infobtn.addEventListener("click", toggleMenuInfo);
-menuInfo.forEach(
-  function(menuItem) {
-  menuItem.addEventListener("click", toggleMenuInfo)
-  }
-)
+// infobtn.addEventListener("click", toggleMenuInfo);
+// menuInfo.forEach(
+//   function(menuItem) {
+//   menuItem.addEventListener("click", toggleMenuInfo)
+//   }
+// )
   
