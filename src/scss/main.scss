@@ -239,6 +239,9 @@ section {
 #project {
   flex-wrap: nowrap;
   flex-direction: column;
+  overflow-y:scroll;
+  padding-top: 25rem;
+  padding-bottom: 5rem;
   h3 {
     padding: 0.5em 1em;
     @include bg-fade;
