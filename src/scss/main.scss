@@ -4,7 +4,7 @@
 @use "./linkmenu";
 
 * {
-  outline: 1px solid black;
+  // outline: 1px solid red;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -236,29 +236,36 @@ section {
   }
 }
 
+.project-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: scroll;
+  gap: 2rem;
+  
+}
 #project {
   flex-wrap: nowrap;
   flex-direction: column;
-  overflow-y:scroll;
+  padding: 0 0.5rem;
   h3 {
     padding: 0.5em 1em;
     @include bg-fade;
     @include border-gold;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
   }
-  div {
+  .projects {
+    width: auto;
     max-width: min-content;
+    justify-content: center;
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
-  }
-  p {
-    row-gap: 1rem;
-    display: flex;
-    padding: 1rem;
-    width: 200px;
-    align-items: center;
+    
+    p {
+      width: 250px;
+      padding: 0.5rem;
+    }
   }
   // ul {
   //   margin-top: 1em;
@@ -277,6 +284,8 @@ section {
   // }
   // }
 }
+
+
 
 
 .footer {
@@ -330,6 +339,7 @@ section {
 }
 
 @media ( min-width: 768px) {
+
 .hamburger {
   right: 0;
 }
@@ -339,7 +349,7 @@ section {
    }
     .menu {
       height: 550px;
-  
+ 
     }
     
     #about {
@@ -373,18 +383,12 @@ section {
         max-width: 450px;
       }
     }        
-  }
-}
-
-  #project {
-    div {
-      width: 66%;
-    }
-
+    } 
   }
 }
 
 @media ( min-width: 1024px)  {
+
   .hamburger {
     right: 1em;
   }
