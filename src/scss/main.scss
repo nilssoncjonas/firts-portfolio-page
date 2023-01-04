@@ -4,7 +4,7 @@
 @use "./linkmenu";
 
 * {
-  // border: 1px solid black;
+  outline: 1px solid black;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -240,23 +240,42 @@ section {
   flex-wrap: nowrap;
   flex-direction: column;
   overflow-y:scroll;
-  padding-top: 25rem;
-  padding-bottom: 5rem;
   h3 {
     padding: 0.5em 1em;
     @include bg-fade;
     @include border-gold;
+    margin-bottom: 2rem;
   }
-  ul {
-    margin-top: 1em;
-    list-style: none;
-    li {
-      margin-top: 1.5em;
-      p {
-        margin-top: 0.5em;
-      }
-    }
+  div {
+    max-width: min-content;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
+  p {
+    row-gap: 1rem;
+    display: flex;
+    padding: 1rem;
+    width: 200px;
+    align-items: center;
+  }
+  // ul {
+  //   margin-top: 1em;
+  //   list-style: none;
+  //   max-width: 800px;
+  //   display: flex;
+  //   justify-content: center;
+  //   flex-wrap: wrap;
+  //   gap: 1rem;
+
+  //   li {
+  //     margin-top: 1.5em;
+  //     p {
+  //       margin-top: 0.5em;
+  //     }
+  // }
+  // }
 }
 
 
