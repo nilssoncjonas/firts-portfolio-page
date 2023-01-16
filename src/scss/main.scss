@@ -11,12 +11,15 @@
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   font-family: Linux;
+
 }
 body {
   background-color: c.$black-bg-body;
+  background-image: url(/dist/img/leather.webp);
 }
 
-main {
+main {  
+
   height: 98vh; 
 
 section {
@@ -32,6 +35,8 @@ section {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 1em;
+
+
   }
 }
 
@@ -110,6 +115,7 @@ section {
 
 
 #skills {
+
   flex-direction: column;
   i {
     margin-left: 0.5em;
@@ -212,7 +218,9 @@ section {
   overflow-y: hidden;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+
   @include bg-fade;
+  background-image: url(/dist/img/leather.webp);
   @include border-grey-shadow;
 
   div {
@@ -222,8 +230,8 @@ section {
     height: auto;
     min-width: 90vw;
     max-width: 1024px;
-    scroll-snap-align: center;
     scroll-snap-stop: always;
+    scroll-snap-align: center;
     p {
       width: 100%;
     }
@@ -238,10 +246,13 @@ section {
 
 .project-wrap {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   overflow-y: scroll;
-  gap: 2rem;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
   
 }
 #project {
@@ -254,6 +265,7 @@ section {
     @include border-gold;
     margin: 2rem 0;
   }
+
   .projects {
     width: auto;
     max-width: min-content;
