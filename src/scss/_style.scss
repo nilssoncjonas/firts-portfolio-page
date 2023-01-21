@@ -19,14 +19,14 @@ body {
 
 main {  
 
-  height: 98vh; 
+  height: 100vh; 
 
 section {
 
     background-color: c.$black-bg-dark;
     scroll-snap-align: center;
     scroll-snap-stop: always;
-    height: 98vh;
+    height: 100vh;
     text-align: center;
     color: c.$gold;
     display: flex;
@@ -317,9 +317,13 @@ section {
 .hamburger {
   right: 0;
 }
+main {
+  height: 96vh
+}
   section {
     @include border-gold-shadow;
     width: 90vw;
+    height: 95vh;
     margin: 1em auto;
    }
     .menu {

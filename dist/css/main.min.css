@@ -21,13 +21,13 @@ body {
 }
 
 main {
-  height: 98vh;
+  height: 100vh;
 }
 main section {
   background-color: #1E1E1F;
   scroll-snap-align: center;
   scroll-snap-stop: always;
-  height: 98vh;
+  height: 100vh;
   text-align: center;
   color: #ad7f51;
   display: flex;
@@ -391,11 +391,15 @@ main section {
   .hamburger {
     right: 0;
   }
+  main {
+    height: 96vh;
+  }
   section {
     border: 1px solid #ad7f51;
     border-radius: 25px;
     box-shadow: 0px 0px 5px 5px rgba(18, 18, 18, 0.75);
     width: 90vw;
+    height: 95vh;
     margin: 1em auto;
   }
   .menu {
