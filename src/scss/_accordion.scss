@@ -1,0 +1,37 @@
+@use "./font";
+@use "./mixins" as *;
+@use "./colors" as c;
+// @use "./main";
+
+.container {
+  outline: 1px solid red;
+  margin: 0 auto;
+  padding: 4rem;
+  width: 90%;
+}
+.accordion {
+  margin-top: 20px;
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1rem 0;
+    color: green;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-bottom: none;
+    outline: none;
+    background: none;
+  }
+  .accordion-item {
+    border-bottom: 1px solid blue;
+    button[aira-expanded="true"] {
+      border-bottom: 1px solid blue;
+
+    }
+  } 
+}
+
+
+
