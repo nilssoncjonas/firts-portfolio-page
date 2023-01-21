@@ -1,10 +1,10 @@
-  // Link menu
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger= document.querySelector(".hamburger");
 const closeIcon= document.querySelector(".closeIcon");
 const menuIcon = document.querySelector(".menuIcon");
 
+// burger menu and toggle
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
@@ -28,3 +28,17 @@ menuItems.forEach(
     }
   ) 
 
+// accordion at my project section
+const items = document.querySelectorAll('.accordion button')
+
+items.forEach(item => item.addEventListener('click', toggleAccordion))
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute("aria-expanded")
+  for(let item of items) {
+    item.setAttribute("aria-expanded", false)
+  }
+  if (itemToggle === 'false') {
+    this.setAttribute("aria-expanded", true)
+  }
+}
