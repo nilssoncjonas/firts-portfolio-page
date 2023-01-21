@@ -311,6 +311,7 @@ main section {
   flex-wrap: nowrap;
   flex-direction: column;
   padding: 0 0.5rem;
+  padding-top: 1rem;
 }
 #project h3 {
   padding: 0.5em 1em;
