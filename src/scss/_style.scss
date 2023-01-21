@@ -140,7 +140,7 @@ section {
   ul {
     list-style: none;
     margin-top: 0.5em;
-    width: 33%;
+    width: 66%;
     li {
       margin: 1em 0em;
       border: 1px solid c.$black-bg-dark;
@@ -242,17 +242,7 @@ section {
   }
 }
 
-.project-wrap {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow-y: scroll;
-  gap: 1rem;
-  width: 100%;
-  align-items: center;
-  
-}
+
 #project {
   flex-wrap: nowrap;
   flex-direction: column;
@@ -262,20 +252,6 @@ section {
     @include bg-fade;
     @include border-gold;
     margin: 2rem 0;
-  }
-
-  .projects {
-    width: auto;
-    max-width: min-content;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-    
-    p {
-      width: 250px;
-      padding: 0.5rem;
-    }
   }
 
 }
