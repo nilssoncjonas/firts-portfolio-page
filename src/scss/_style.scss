@@ -1,0 +1,386 @@
+@use "./font";
+@use "./mixins" as *;
+@use "./colors" as c;
+* {
+  // outline: 1px solid red;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  font-family: Linux;
+
+}
+body {
+  // background-color: c.$black-bg-body;
+  background-image: url(/dist/img/leather.webp);
+  background-color: #000000;
+}
+
+main {  
+
+  height: 98vh; 
+
+section {
+
+    background-color: c.$black-bg-dark;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    height: 98vh;
+    text-align: center;
+    color: c.$gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+
+
+  }
+}
+
+.pic-bg {
+  @include border-gold-shadow;
+  margin: 10%;
+  @include bg-fade;
+  img {
+    display: block;
+    border: 1px solid c.$black-fade-top;
+    border-radius: 25px;
+    margin: 1.5rem auto;
+    width: 60%;
+  }
+}
+
+.frontLogoWrap {
+  @include border-gold-shadow;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: none;
+  @include bg-fade;
+  .textFlip {
+    position: relative;
+    span {
+      position: relative;
+      display: inline-block;
+      font-size: 2em;
+      animation: flip 3s infinite;
+      animation-delay: calc(0.2s * var(--i));
+    }
+  }
+  h3 {
+    text-transform: uppercase;
+    span {
+      color: c.$gold-light;
+      display: block;
+    }
+  }
+}
+
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+  flex-wrap: nowrap;
+  .vertical {
+    font-size: 2rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-align: center;
+    padding: 0.25em;
+    height: 40vh;
+    @include border-gold;
+    border-radius: 25px;
+    @include bg-fade
+  }
+  
+  .text {
+    border-right: 1px solid c.$gold;
+    color: c.$white;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: left;
+    line-height: 1.8;
+  }
+}
+
+
+#skills {
+
+  flex-direction: column;
+  i {
+    margin-left: 0.5em;
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-radius: 50px;
+    @include bg-fade;
+    &:hover {
+      transition: all 0.3s ease 0s;
+      transform: scale(0.8) rotate(360deg); 
+    }
+    &:not(:hover) {
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  h3 {
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+  
+    @include border-gold;
+    @include bg-fade;
+  }
+  ul {
+    list-style: none;
+    margin-top: 0.5em;
+    width: 66%;
+    li {
+      margin: 1em 0em;
+      border: 1px solid c.$black-bg-dark;
+      border-radius: 15px;
+      padding: 0.5em 0.25em;
+      &:hover {
+        border-radius: 15px;
+        border: 1px solid c.$gold;
+        transition: all 0.3s ease 0s;
+        animation: shake 0.5s; 
+        animation-iteration-count: infinite;
+        @include bg-fade;
+      }
+      &:not(:hover) {
+        transition: all 0.3s ease 0s;
+      } 
+    }
+  }
+}
+
+@keyframes shake {
+ 
+  0%  {transform: translate(1px, 1px) rotate(0deg)}
+  10%  {transform: translate(-1px, -2px) rotate(-1deg)}
+  20%  {transform: translate(-3px, 0px) rotate(1deg)}
+  30%  {transform: translate(3px, 2px) rotate(0deg)}
+  40%  {transform: translate(1px, -1px) rotate(1deg)}
+  50%  {transform: translate(-1px, 2px) rotate(-1deg)}
+  60%  {transform: translate(-3px, 1px) rotate(0deg)}
+  70%  {transform: translate(3px, 1px) rotate(-1deg)}
+  80%  {transform: translate(-1px, -1px) rotate(1deg)}
+  90%  {transform: translate(1px, 2px) rotate(0deg)}
+  100% {transform: translate(1px, -2px) rotate(-1deg)}
+}
+
+
+#education {  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h3 {
+    padding: 0.5em 1em;
+    @include bg-fade;
+    @include border-gold;
+    span {
+      display: block;
+    }
+  }
+  p {
+
+    margin: 1em 0.5em;
+    color: c.$white;
+  }
+  i {
+    font-size: 2rem;
+    &:hover {
+      transition: all 0.3s ease 0s;
+      transform: scale(1.1) rotate(180deg); 
+    }
+    &:not(:hover) {
+      transition: all 0.3s ease 0s;
+    }
+  }
+}
+
+.fedu-wrap {
+  margin: 1em auto;
+  width: 90vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  @include bg-fade;
+  background-image: url(/dist/img/leather.webp);
+  background-color: #000000;
+  @include border-grey-shadow;
+
+  div {
+    line-height: 1.2;
+    margin: 1em;
+    padding: 0.5em;
+    height: auto;
+    min-width: 90vw;
+    max-width: 1024px;
+    scroll-snap-stop: always;
+    scroll-snap-align: center;
+    p {
+      width: 100%;
+    }
+    h4 {
+      margin-bottom: 0.5em;
+      i {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+
+#project {
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  h3 {
+    padding: 0.5em 1em;
+    @include bg-fade;
+    @include border-gold;
+    margin: 2rem 0;
+  }
+
+}
+
+
+
+
+.footer {
+  text-align: center;
+  list-style-type: none;
+  margin-bottom: 2rem;
+  li {
+    margin-top: 1.5rem;
+    padding: 0.5em;
+    span {
+      display: block;
+    }
+    a {
+      color: c.$gold;
+      text-decoration: none;
+      letter-spacing: 2px;
+      
+      i {
+        font-size: 2.5em;
+        &:hover {
+          padding: 0.5em;
+          border-radius: 25px;
+          transition: all 0.3s ease 0s;
+          @include bg-fade;
+          @include border-gold-shadow;
+          z-index: 0;
+        }
+        &:not(:hover) {
+          transition: all 0.3s ease 0s;
+        } 
+       }
+    }
+  }
+
+}
+
+#download {
+  @include button;
+}
+#downloadI {
+  padding-right: 15px;
+  font-size: 1.5rem; 
+}
+#contact {
+  h3 {
+    @include bg-fade;
+    @include border-gold;
+    padding: 0.5em 0.25em;
+    margin-top: 4em;
+  }
+}
+
+@media ( min-width: 768px) {
+
+.hamburger {
+  right: 0;
+}
+  section {
+    @include border-gold-shadow;
+    width: 90vw;
+    margin: 1em auto;
+   }
+    .menu {
+      height: 550px;
+ 
+    }
+    
+    #about {
+      .text {
+        margin: 0 5em;
+        max-width: 600px;
+      }
+      .vertical {
+        margin-right: 3em;
+      }    
+    }
+    
+    
+  #education {
+    h3 {
+      span {
+        display: inline;
+      }
+    }
+    p {
+      // width: 50%;
+      margin: 2em;
+    }
+    .fedu-wrap {
+      max-width: 600px;
+      height: 50%;
+    div {
+      min-width: 95%;
+      p {
+        margin: 0 auto;
+        max-width: 450px;
+      }
+    }        
+    } 
+  }
+}
+
+@media ( min-width: 1024px)  {
+
+  .hamburger {
+    right: 1em;
+  }
+ section {
+  width: 66vw;
+  margin: 1em auto;
+ }
+
+  .fedu-wrap {
+    div {
+      min-width: 90%;
+    }
+  }
+  #education { 
+    p {
+      width: 66%;
+    }
+  }
+
+}
