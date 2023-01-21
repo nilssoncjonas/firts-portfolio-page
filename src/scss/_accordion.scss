@@ -103,6 +103,7 @@ color: c.$gold-light;
     color: c.$gold;
     text-decoration: none;
     img {
+      border: 1px solid c.$gold;
       border-radius: 5px;
     }
   }

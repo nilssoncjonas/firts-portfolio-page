@@ -16,8 +16,8 @@
 }
 
 body {
-  background-color: #121212;
   background-image: url(/dist/img/leather.webp);
+  background-color: #000000;
 }
 
 main {
@@ -283,6 +283,7 @@ main section {
       scroll-snap-type: x mandatory;
   background-image: linear-gradient(135deg, #383838, #252525);
   background-image: url(/dist/img/leather.webp);
+  background-color: #000000;
   border: 1px solid #3f3f3f;
   border-radius: 25px;
   box-shadow: 0px 0px 5px 5px rgba(18, 18, 18, 0.75);
@@ -435,6 +436,9 @@ main section {
   }
   .fedu-wrap div {
     min-width: 90%;
+  }
+  #education p {
+    width: 66%;
   }
 }
 .hamburger {
@@ -604,6 +608,7 @@ main section {
   text-decoration: none;
 }
 .accordion-content p a img, .accordion-content p a:active img, .accordion-content p a:visited img, .accordion-content p a:focus img {
+  border: 1px solid #ad7f51;
   border-radius: 5px;
 }
 

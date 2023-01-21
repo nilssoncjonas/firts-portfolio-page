@@ -12,8 +12,9 @@
 
 }
 body {
-  background-color: c.$black-bg-body;
+  // background-color: c.$black-bg-body;
   background-image: url(/dist/img/leather.webp);
+  background-color: #000000;
 }
 
 main {  
@@ -192,6 +193,7 @@ section {
     }
   }
   p {
+
     margin: 1em 0.5em;
     color: c.$white;
   }
@@ -219,6 +221,7 @@ section {
 
   @include bg-fade;
   background-image: url(/dist/img/leather.webp);
+  background-color: #000000;
   @include border-grey-shadow;
 
   div {
@@ -372,6 +375,11 @@ section {
   .fedu-wrap {
     div {
       min-width: 90%;
+    }
+  }
+  #education { 
+    p {
+      width: 66%;
     }
   }
 
