@@ -412,6 +412,12 @@ main section {
   #about .vertical {
     margin-right: 3em;
   }
+  #skills ul {
+    width: 50%;
+  }
+  #skills ul li {
+    margin: 1em 0em;
+  }
   #education h3 span {
     display: inline;
   }
@@ -440,6 +446,9 @@ main section {
   }
   .fedu-wrap div {
     min-width: 90%;
+  }
+  #skills ul {
+    width: 40%;
   }
   #education p {
     width: 66%;

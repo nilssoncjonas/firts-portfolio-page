@@ -345,6 +345,14 @@ main {
       }    
     }
     
+  #skills {
+    ul {
+      width: 50%;
+      li {
+        margin: 1em 0em;
+      }
+    }
+  }
     
   #education {
     h3 {
@@ -388,6 +396,12 @@ main {
       min-width: 90%;
     }
   }
+  #skills {
+    ul {
+      width: 40%;
+    }
+  }
+
   #education { 
     p {
       width: 66%;
