@@ -147,10 +147,10 @@ main section {
 #skills ul {
   list-style: none;
   margin-top: 0.5em;
-  width: 66%;
+  width: 90%;
 }
 #skills ul li {
-  margin: 1em 0em;
+  margin: 0em;
   border: 1px solid #1E1E1F;
   border-radius: 15px;
   padding: 0.5em 0.25em;
